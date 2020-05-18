@@ -1,0 +1,73 @@
+.my-link-color {
+    color: white;
+}
+
+    .my-link-color:hover {
+        color: gainsboro;
+        text-decoration: none;
+    }
+
+    .my-link-color:focus {
+        color: gold;
+        text-decoration: none;
+    }
+
+.my-tab-color {
+    background-color: antiquewhite;
+    color: white;
+}
+
+.my-tab-content-color {
+    background-color: antiquewhite;
+}
+
+.my-schedule-form {
+    background-color: palegreen;
+}
+
+.my-status {
+    font-style: italic;
+    color:fuchsia;
+}
+
+.my-input-width{
+    width:100px;
+}
+
+.my-schedule-form-delete{
+    background-color: firebrick;
+}
+
+.my-schedule-form-update {
+    background-color: cyan;
+}
+
+.my-tab-right{
+    float:right;
+    cursor:pointer;
+}
+
+/*--------------tooltip------------*/
+#update_homeScore, #update_awayScore{
+    position:relative;
+}
+
+    #update_homeScore .my-tooltip, #update_awayScore .my-tooltip {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+    }
+
+    #update_homeScore:hover .my-tooltip, #update_awayScore:hover .my-tooltip {
+        visibility: visible;
+    }

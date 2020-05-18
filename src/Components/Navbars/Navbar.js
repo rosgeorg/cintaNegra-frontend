@@ -21,7 +21,7 @@ const Navigation = (props) => {
 
   return (
     <Navbar
-      className="navbar navbar-expand-lg navbar-light bg-light navbar-color"
+      className="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar-color"
       // style={{ backgroundColor: "black", color: "red" }}
       expand="md">
       <NavbarBrand tag={Link} to="/"><img className="logo_navbar" src="./LogoEMRHColor(copia2).png" alt="La imagen no existe o cambió su ubicación"></img></NavbarBrand>

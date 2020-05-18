@@ -14,7 +14,7 @@ function App() {
     <Fragment>  
       <Router>
         <Navigation />
-        <Container className="mt-4">
+        <Container>
           <Switch>
             { Routes }
           </Switch>

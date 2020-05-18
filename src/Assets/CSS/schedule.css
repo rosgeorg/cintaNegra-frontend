@@ -1,0 +1,47 @@
+table {
+    background-color: whitesmoke;
+}
+
+.container-size{
+    height: 100vh;
+    margin-top: 0rem !important;
+}
+
+.schedule-text{
+    text-align: center;
+}
+
+.left-text{
+    text-align: left;
+}
+
+.add-button{
+    width: 40.85px;
+    height: 28.5px;
+    border-radius: 28px !important;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    background-color: green !important;
+    border-color: green !important;
+    font-size: 0.55rem;
+    text-align: center;
+}
+
+.remove-button{
+    width: 64.185px;
+    height: 28.5px;
+    border-radius: 28px !important;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    background-color: red !important;
+    border-color: red !important;
+    font-size: 0.55rem;
+    text-align: center;
+}
+
+.appointment-button{
+    width: 64.185px;
+    height: 28.5px;
+    font-size: 0.7rem;
+    padding: 0rem;
+}

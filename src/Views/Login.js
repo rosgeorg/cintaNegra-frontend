@@ -13,9 +13,9 @@ import {
 
 function Login() {
     return (
-        <div id="login">
-            <h3 className="text-center text-white pt-5">Please enter your credentials</h3>
-            <div className="container">
+        <div id="login" className="container d-flex align-items-center container-size d-block">
+            <h3 className="text-center text-white pt-5 d-block">Please enter your credentials</h3>
+            <div className="container d-block">
                 <div id="login-row" className="row justify-content-center align-items-center">
                     <div id="login-column" className="col-md-6">
                         <div id="login-box" className="col-md-12 mt-5">

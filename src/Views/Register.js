@@ -25,7 +25,6 @@ import '../Assets/CSS/main-content.css';
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
   FormGroup,
   Form,
@@ -42,7 +41,7 @@ import {
 const Register = () => {
 
       return (
-        <div id="register">
+        <div id="register" className='container d-flex align-items-center container-size'>
             <Container className="pt-lg-7 pt-5">
               <Row className="justify-content-center">
                 <Col lg="5">

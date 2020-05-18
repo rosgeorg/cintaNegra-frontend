@@ -5,9 +5,11 @@ body {
     background-image: url(../Images/fondosemr/Fondo03.jpg);
     position: relative !important;
     min-height: 100vh !important;
-    
   }
 
+  .container-size{
+    height: 100vh;
+}
 
   #login .container #login-row #login-column #login-box {
     margin-top: 120px;

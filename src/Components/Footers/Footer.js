@@ -3,14 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 // reactstrap components
 import {
-    Button,
     NavItem,
     NavLink,
     Nav,
-    Container,
     Row,
     Col,
-    UncontrolledTooltip
   } from "reactstrap";
 
 //styles
@@ -20,7 +17,7 @@ import '../../Assets/CSS/footer.css'
 const Footersito = () => {
     return (
         <div id="footer" className="footer-bg">
-            <footer className="footer">
+          <footer className="footer">
           <Container-fluid>
             {/* <hr /> */}
             <Row className=" align-items-center justify-content-md-between">
@@ -30,7 +27,6 @@ const Footersito = () => {
                   <a className='text-color'>
                     Dev.F-EMR
                   </a>
-                  .
                 </div>
               </Col>
               <Col md="6">
