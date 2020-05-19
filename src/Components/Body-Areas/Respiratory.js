@@ -12,7 +12,7 @@ const Respiratory = (props) => {
 
   return (
     <div>
-      <Button color="primary" onClick={toggle} style={{ margin:'1rem' }}>Respiratory</Button>
+      <Button onClick={toggle} style={{ margin:'1rem', color:'white', backgroundColor:'#089fc6' }}>Respiratory</Button>
       <Collapse isOpen={isOpen}>
         <Card>
           <CardBody className='d-flex flex-row'>

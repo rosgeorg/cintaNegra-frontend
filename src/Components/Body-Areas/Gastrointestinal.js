@@ -12,7 +12,7 @@ const Gastro = (props) => {
 
   return (
     <div>
-      <Button color="primary" onClick={toggle} style={{ margin:'1rem'}}>Gastrointestinal</Button>
+      <Button onClick={toggle} style={{ margin:'1rem', color:'white', backgroundColor:'#089fc6'}}>Gastrointestinal</Button>
       <Collapse isOpen={isOpen}>
         <Card>
           <CardBody className='d-flex flex-row'>
