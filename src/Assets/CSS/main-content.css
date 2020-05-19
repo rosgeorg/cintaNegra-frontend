@@ -4,7 +4,7 @@ body {
     /* background-color: #089fc6; */
     background-image: url(../Images/fondosemr/Fondo03.jpg);
     position: relative !important;
-    min-height: 100vh !important;
+    min-height: 100vh;
   }
 
   .container-size{

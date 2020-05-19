@@ -1,0 +1,36 @@
+.container-card-size{
+    height: calc(85vh - 7rem);
+}
+
+.row-size{
+    width: 100vw;
+}
+
+.container-size{
+    height: 100vh;
+}
+
+.info-bg{
+    background-color: whitesmoke;
+}
+
+.headerDivider {
+    border-left:1px solid #38546d; 
+    border-right:1px solid #16222c; 
+    height:80px;
+    position:absolute;
+    right:249px;
+    top:10px; 
+}
+
+.subjective-bg{
+    background-color: white;
+}
+/* body {
+    margin: 0;
+    padding: 0;
+    
+    background-image: url(../Images/fondosemr/Fondo03.jpg);
+    position: relative !important;
+    min-height: 100vh;
+  } */
