@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+/src/Components/Navbars/Navbar-copy.js
+/src/Views/Schedule-copy.js
+/src/Views/Subjective-copy.js
+/src/Views/Objective-copy.js
+

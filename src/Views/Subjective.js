@@ -17,6 +17,7 @@ import Cards from '../Components/Card'
 import Buttons from '../Components/Buttons'
 import Gastro from '../Components/Body-Areas/Gastrointestinal'
 import Respiratory from '../Components/Body-Areas/Respiratory'
+import NewForm from '../Components/Forms/NewForm'
 
 const Subjective = () => {
     return (
@@ -34,9 +35,10 @@ const Subjective = () => {
                         <div className='container container-card-size info-bg pt-4 pb-4'>
                             <div className='container d-flex flex-row justify-content-between'>
                                 <h6 style={{ fontSize: '30px' }}>(S) SUBJECTIVE</h6>
-                                <Button style={{ height: '70%', fontSize: '70%', fontWeight: 'bold' }}>SAVE</Button>
+                                <NewForm />
+                                {/* <Button style={{ height: '70%', fontSize: '70%', fontWeight: 'bold' }}>FILL NEW FORM</Button> */}
                             </div>
-                            <div className='container subjective-bg d-flex flex-column justify-content-center pt-4 pb-4'>
+                            {/* <div className='container subjective-bg d-flex flex-column justify-content-center pt-4 pb-4'>
                                 <div className=''>
                                     <h6>Notes (Chief Complaint)</h6>
                                     <Input style={{height:'5rem', wordWrap:'break-word'}} placeholder="username" />
@@ -47,7 +49,7 @@ const Subjective = () => {
                                     <Respiratory />
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </Col>
                 </Row>
