@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import axios from 'axios';
+import { AuthContext } from '../contexts/AuthContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Link } from 'react-router-dom';
+
+import CardsTest from '../Components/cardPrueba'
 
 import {
     Container,
@@ -19,7 +23,36 @@ import Gastro from '../Components/Body-Areas/Gastrointestinal'
 import Respiratory from '../Components/Body-Areas/Respiratory'
 import NewForm from '../Components/Forms/NewForm'
 
+
+
 const Subjective = () => {
+
+    const { axiosInstance } = useContext(AuthContext);
+    const [encounter, setEncounter] = useState([]);
+
+    const getEncounter = () => axiosInstance.get('/api/v1/encounters/5ec635481d2f1600173af914');
+
+    useEffect( () => {
+        getEncounter()
+          .then((response) => {
+            console.log(response.data);
+            const encounter = response.data;
+            // console.log(encounter);
+            setEncounter(encounter);
+          })
+          .catch((err) => console.log(err));
+      }, [])
+
+    // useEffect(() => {
+    //     axios.get('https://erm-devf-backend.herokuapp.com/api/v1/encouners/5ec63de31d2f1600173af923')
+    //         .then((result) => {
+    //             console.log(result.data);
+    //             setEncounter(result.data);
+    //         }).catch((err) => {
+    //             console.log(err);
+    //         });
+    // }, []);
+
     return (
         <div>
             <Container>
@@ -37,6 +70,12 @@ const Subjective = () => {
                                 <h6 style={{ fontSize: '30px' }}>(S) SUBJECTIVE</h6>
                                 <NewForm />
                                 {/* <Button style={{ height: '70%', fontSize: '70%', fontWeight: 'bold' }}>FILL NEW FORM</Button> */}
+                            </div>
+                            <div>
+                                <CardsTest
+                                    rendering={encounter.rendering}
+                                    chefComplaint={encounter.chiefComplaint}
+                                />
                             </div>
                             {/* <div className='container subjective-bg d-flex flex-column justify-content-center pt-4 pb-4'>
                                 <div className=''>
