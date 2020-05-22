@@ -4,8 +4,13 @@ table {
 
 .container-size{
     height: 100vh;
-    margin-top: 0rem !important;
+    margin-top: 7rem !important;
 }
+
+.containerr-size{
+    height: 100vh;
+}
+
 
 .schedule-text{
     text-align: center;
@@ -40,7 +45,7 @@ table {
 }
 
 .appointment-button{
-    width: 64.185px;
+    width:auto;
     height: 28.5px;
     font-size: 0.7rem;
     padding: 0rem;

@@ -33,6 +33,7 @@ const ModalAdd = (props) => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [dob, setDob] = useState('');
+  const [sex, setSex] = useState('');
 
   // Redireccionar si el usuario no esta autentica
   if (!isAuth) return (<Redirect to="/login" />)
@@ -45,6 +46,7 @@ const ModalAdd = (props) => {
     setName('');
     setLastName('');
     setDob('');
+    setSex('');
   }
 
   const handleSubmit = async (e) => {
@@ -58,7 +60,8 @@ const ModalAdd = (props) => {
       pt: {
         name: name,
         lastName: lastName,
-        dob: dob
+        dob: dob,
+        sex: sex
       }
     }
   
@@ -66,6 +69,7 @@ const ModalAdd = (props) => {
         await axiosInstance.post('/api/v1/encounters', jsonSend);
         formCleanup();
         alert('encounter successfully added');
+        window.location.reload();
       } catch(error) {
         alert(error);
       }
@@ -75,14 +79,14 @@ const ModalAdd = (props) => {
       <div>
         <Button
           style={{
-            width: '40.85px',
+            width: 'auto',
             height: '28.5px',
             borderRadius: '28px',
             textTransform: 'uppercase',
             fontWeight: 'bold',
             backgroundColor: '#089fc6',
             borderColor: '#089fc6',
-            fontSize: '0.55rem',
+            fontSize: '0.75rem',
             textAlign: 'center'
           }}
           onClick={toggle}
@@ -94,6 +98,24 @@ const ModalAdd = (props) => {
           <ModalBody>
             <h1 className="mb-4">Add a new Appointment</h1>
             <Form onSubmit={handleSubmit}>
+            <FormGroup>
+                <Label>Rendering</Label>
+                <Input
+                  type="text"
+                  name="Rendering"
+                  value={rendering}
+                  onChange={(e) => setRendering(e.target.value)}
+                  placeholder="Rendering" />
+              </FormGroup>
+              <FormGroup>
+                <Label>Chief Complaint</Label>
+                <Input
+                  type="text"
+                  name="ChiefComplaint"
+                  value={chiefComplaint}
+                  onChange={(e) => setChiefComplaint(e.target.value)}
+                  placeholder="Chief Complaint" />
+              </FormGroup>
               <FormGroup>
                 <Label>Date</Label>
                 <Input
@@ -129,6 +151,15 @@ const ModalAdd = (props) => {
                   value={dob}
                   onChange={(e) => setDob(e.target.value)}
                   placeholder="Date of Birthday" />
+              </FormGroup>
+              <FormGroup>
+                <Label>Sex</Label>
+                <Input
+                  type="enum"
+                  name="Sex"
+                  value={sex}
+                  onChange={(e) => setSex(e.target.value)}
+                  placeholder="Sex" />
               </FormGroup>
               <Button>Submit</Button>
             </Form>

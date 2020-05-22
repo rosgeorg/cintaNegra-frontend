@@ -10,12 +10,13 @@ const Cards = (props) => {
         </div>
         <CardBody style={{fontSize:'12px'}}>
           <CardTitle>PATIENT:</CardTitle>
-          <CardText style={{lineHeight:'3px'}}>REFERENCIA A: NAME</CardText>
-          <CardText style={{lineHeight:'3px'}}>REFERENCIA A: AGE</CardText> 
-          <CardText style={{lineHeight:'3px'}}>REFERENCIA A: GENDER</CardText> 
+          <CardText style={{lineHeight:'3px'}}>Name: <span style={{fontWeight:'bold'}}>{props.name} {props.lastName}</span> </CardText>
+          <CardText style={{lineHeight:'3px'}}>Date of Birthday: <span style={{fontWeight:'bold'}}>{props.dob}</span></CardText> 
+          <CardText style={{lineHeight:'3px'}}>Gender: <span style={{fontWeight:'bold'}}>{props.sex}</span></CardText> 
+          <hr></hr>
           <CardTitle>APPOINTMENT:</CardTitle>
-          <CardText style={{lineHeight:'3px'}}>REFERENCIA A: TIME</CardText>
-          <CardText style={{lineHeight:'3px'}}>05-22-2020</CardText> 
+          <CardText style={{lineHeight:'3px'}}>Rendering: <span style={{fontWeight:'bold'}}>{props.rendering}</span></CardText>
+          <CardText style={{lineHeight:'3px'}}>Date: <span style={{fontWeight:'bold'}}>{props.schedule}</span></CardText> 
         </CardBody>
       </Card>
     </div>

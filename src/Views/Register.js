@@ -81,7 +81,7 @@ const Register = () => {
 
 
   return (
-    <div id="register" className='container d-flex align-items-center container-size'>
+    <div id="register" className='container d-flex align-items-center containerr-size'>
       <Container className="pt-lg-7 pt-5">
         <Row className="justify-content-center">
           <Col lg="5">

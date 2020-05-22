@@ -28,8 +28,8 @@ const Encounters = (props) => {
                 <tbody>
                     <tr>
                         <th scope="row">{props.id}</th>
-                        <td><Button className='appointment-button'>8:00 am</Button></td>
-                        <td className='left-text'>BERNAL LIDIA</td>
+                        <td><Button className='appointment-button'>{props.schedule}</Button></td>
+                        <td className='left-text'>{props.name} {props.lastName}</td>
                         <td>82</td>
                         <td>F</td>
                         <td className='d-flex justify-content-center'><ModalAdd>Add</ModalAdd><Button className='remove-button'>Remove</Button></td>

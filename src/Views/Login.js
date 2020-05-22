@@ -49,10 +49,10 @@ function Login() {
 
 
     return (
-        <div id="login" className="container d-flex flex-column justify-content-center container-size">
-            <h3 className="text-center text-white pt-5 d-block">Please enter your credentials</h3>
-            <div id="register" className='container d-flex align-items-center container-size'>
-                <Container className="pt-lg-7 pt-5">
+        <div id="login" className="container d-flex flex-column justify-content-center containerr-size">
+            {/* <h3 className="text-center text-white pt-5 d-block">Please enter your credentials</h3> */}
+            <div id="register" className='container d-flex align-items-center containerr-size'>
+                <Container className="">
                     <Row className="justify-content-center">
                         <Col lg="5">
                             <Card className="register_color shadow border-0">

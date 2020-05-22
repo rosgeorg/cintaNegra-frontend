@@ -39,9 +39,12 @@ const AuthContextProvider = (props) => {
     setAuth(false);
   }
 
+
   if (getToken()) {
     axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${getToken()}`;
   }
+
+  
 
   return (
     <AuthContext.Provider value={{ 
