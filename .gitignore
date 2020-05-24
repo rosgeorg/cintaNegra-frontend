@@ -104,7 +104,11 @@ dist
 .tern-port
 
 /src/Components/Navbars/Navbar-copy.js
+/src/Components/Navbars/Navbar-copy2.js
 /src/Views/Schedule-copy.js
+/src/Views/Schedule-copy2.js
 /src/Views/Subjective-copy.js
 /src/Views/Objective-copy.js
+/src/Views/Login-copy.js
+
 

@@ -1,137 +1,133 @@
-import React from 'react';
-import { CustomInput, Form, FormGroup, Label } from 'reactstrap';
+import React, { useState, useContext } from 'react';
+import { Redirect } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthContext';
+
+import { CustomInput, Form, FormGroup, Label, Button } from 'reactstrap';
+
 
 const AbForm = (props) => {
-  return (
-    <Form>
-      {/* <FormGroup>
-        <Label for="exampleCheckbox">Checkboxes</Label>
-        <div>
-          <CustomInput type="checkbox" id="exampleCustomCheckbox" label="Check this custom checkbox" />
-          <CustomInput type="checkbox" id="exampleCustomCheckbox2" label="Or this one" />
-          <CustomInput type="checkbox" id="exampleCustomCheckbox3" label="But not this disabled one" disabled />
-          <CustomInput type="checkbox" id="exampleCustomCheckbox4" label="Can't click this label to check!" htmlFor="exampleCustomCheckbox4_X" disabled />
-        </div>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCheckbox">Radios</Label>
-        <div>
-          <CustomInput type="radio" id="exampleCustomRadio" name="customRadio" label="Select this custom radio" />
-          <CustomInput type="radio" id="exampleCustomRadio2" name="customRadio" label="Or this one" />
-          <CustomInput type="radio" id="exampleCustomRadio3" label="But not this disabled one" disabled />
-          <CustomInput type="radio" id="exampleCustomRadio4" label="Can't click this label to select!" htmlFor="exampleCustomRadio4_X" disabled />
-        </div>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCheckbox">Switches</Label>
-        <div>
-          <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Turn on this custom switch" />
-          <CustomInput type="switch" id="exampleCustomSwitch2" name="customSwitch" label="Or this one" />
-          <CustomInput type="switch" id="exampleCustomSwitch3" label="But not this disabled one" disabled />
-          <CustomInput type="switch" id="exampleCustomSwitch4" label="Can't click this label to turn on!" htmlFor="exampleCustomSwitch4_X" disabled />
-        </div>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCheckbox">Inline</Label>
-        <div>
-          <CustomInput type="checkbox" id="exampleCustomInline" label="An inline custom input" inline />
-          <CustomInput type="checkbox" id="exampleCustomInline2" label="and another one" inline />
-        </div>
-      </FormGroup> */}
-      <FormGroup>
-        <Label for="exampleCustomSelect">How long have you had abdominal pain?</Label>
-        <CustomInput type="select" id="exampleCustomSelect" name="customSelect">
-          <option value="">Select</option>
-          <option>0-24 Hours</option>
-          <option>24-36 Hours</option>
-          <option>36-48 Hours</option>
-          <option>48-72 Hours</option>
-          <option>More Than 72 Hours</option>
-        </CustomInput>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCustomSelect">Where is your abdominal pain located?</Label>
-        <CustomInput type="select" id="exampleCustomSelect" name="customSelect">
-          <option value="">Select</option>
-          <option>Entire abdomen</option>
-          <option>Left part of the abdomen</option>
-          <option>Right part of the abdomen</option>
-          <option>Upper part of the abdomen</option>
-          <option>Lower part of the abdomen</option>
-        </CustomInput>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCheckbox">Does the pain radiate of move to another location?</Label>
-        <div className='d-flex flex-row'>
-            <p>No </p>
-          <CustomInput type="switch" id="locationSwitch" name="customSwitch" label="Yes" />
-        </div>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCheckbox">Did your abdominal pain start all of a sudden or did it come on slowly?</Label>
-        <div className='d-flex flex-row'>
-            <p>Suddenly </p>
-          <CustomInput type="switch" id="painSpeedSwitch" name="customSwitch" label="Slowly" />
-        </div>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCheckbox">Does your abdominal pain occur after eating?</Label>
-        <div className='d-flex flex-row'>
-            <p>No </p>
-          <CustomInput type="switch" id="eatingPainSwitch" name="customSwitch" label="Yes" />
-        </div>
-      </FormGroup>
-      {/* <FormGroup>
-        <Label for="exampleCustomMutlipleSelect">Custom Multiple Select</Label>
-        <CustomInput type="select" id="exampleCustomMutlipleSelect" name="customSelect" multiple>
-          <option value="">Select</option>
-          <option>Value 1</option>
-          <option>Value 2</option>
-          <option>Value 3</option>
-          <option>Value 4</option>
-          <option>Value 5</option>
-        </CustomInput>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCustomSelectDisabled">Custom Select Disabled</Label>
-        <CustomInput type="select" id="exampleCustomSelectDisabled" name="customSelect" disabled>
-          <option value="">Select</option>
-          <option>Value 1</option>
-          <option>Value 2</option>
-          <option>Value 3</option>
-          <option>Value 4</option>
-          <option>Value 5</option>
-        </CustomInput>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCustomMutlipleSelectDisabled">Custom Multiple Select Disabled</Label>
-        <CustomInput type="select" id="exampleCustomMutlipleSelectDisabled" name="customSelect" multiple disabled>
-          <option value="">Select</option>
-          <option>Value 1</option>
-          <option>Value 2</option>
-          <option>Value 3</option>
-          <option>Value 4</option>
-          <option>Value 5</option>
-        </CustomInput>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCustomRange">Custom Range</Label>
-        <CustomInput type="range" id="exampleCustomRange" name="customRange" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCustomFileBrowser">File Browser</Label>
-        <CustomInput type="file" id="exampleCustomFileBrowser" name="customFile" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCustomFileBrowser">File Browser with Custom Label</Label>
-        <CustomInput type="file" id="exampleCustomFileBrowser" name="customFile" label="Yo, pick a file!" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleCustomFileBrowser">File Browser Disabled</Label>
-        <CustomInput type="file" id="exampleCustomFileBrowser" name="customFile" disabled />
-      </FormGroup> */}
-    </Form>
-  );
+
+  // Contexto
+  const { isAuth, axiosInstance } = useContext(AuthContext);
+
+  // Estado
+  const [howLong, setHowLong] = useState('');
+  const [whereIs, setWhereIs] = useState('');
+  const [painLocation, setPainLocation] = useState('');
+  const [painAppear, setPainAppear] = useState('');
+  const [eatingPain, setEatingPain] = useState('');
+
+  // Redireccionar si el usuario no esta autentica
+  if (!isAuth) return (<Redirect to="/login" />)
+
+  // Funciones
+  const formCleanup = () => {
+    setHowLong('');
+    setWhereIs('');
+    setPainLocation('');
+    setPainAppear('');
+    setEatingPain('');
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const jsonSend = {
+      subjetive: {
+        gastroIntestinal: {
+          abdominalPain: {
+            howLongHaveYouHadAbdominalPain: howLong,
+            whereIsYourAbdominalPainLocated: whereIs,
+            doesThePainRadiateOfMoveToAnotherLocation: painLocation,
+            DidYourAbdominalPainStartAllOfASuddenOrDidItComeOnSlowly: painAppear,
+            DoesYourAbdominalPainOccurAfterEating: eatingPain
+          }
+        }
+      }
+    }
+  
+
+  try {
+    await axiosInstance.patch('/api/v1/encounters/5ec85c1e06fe8500177665a8', jsonSend);
+    console.log(jsonSend);
+    formCleanup();
+    alert('info successfully added');
+    window.location.reload();
+  } catch (error) {
+    alert(error);
+  }
+};
+
+
+return (
+  <Form onSubmit={handleSubmit}>
+    <FormGroup>
+      <Label for="howLong">How long have you had abdominal pain?</Label>
+      <CustomInput type="select" id="howLong" name="howLongHaveYouHadAbdominalPain" value={howLong} onChange={(e) => setHowLong(e.target.value)}>
+        <option value="">Select</option>
+        <option>0-24 Hours</option>
+        <option>1-3 Days</option>
+        <option>4-7 Days</option>
+      </CustomInput>
+    </FormGroup>
+    <FormGroup>
+      <Label for="whereIs">Where is your abdominal pain located?</Label>
+      <CustomInput type="select" id="whereIs" name="whereIsYourAbdominalPainLocated" value={whereIs} onChange={(e) => setWhereIs(e.target.value)}>
+        <option value="">Select</option>
+        <option>Entire Abdomen</option>
+        <option>Upper Abdomen</option>
+        <option>Lower Abdomen</option>
+        <option>Left Abdomen</option>
+        <option>Right Abdomen</option>
+      </CustomInput>
+    </FormGroup>
+    <FormGroup>
+      <Label for="locationSwitch">Does the pain radiate of move to another location?</Label>
+      <CustomInput type="select" id="locationSwitch" name="doesThePainRadiateOfMoveToAnotherLocation" value={painLocation} onChange={(e) => setPainLocation(e.target.value)}>
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+      </CustomInput>
+    </FormGroup>
+    <FormGroup>
+      <Label for="painSpeedSwitch">Did your abdominal pain start all of a sudden or did it come on slowly?</Label>
+      <CustomInput type="select" id="painSpeedSwitch" name="DidYourAbdominalPainStartAllOfASuddenOrDidItComeOnSlowly" value={painAppear} onChange={(e) => setPainAppear(e.target.value)}>
+        <option value="">Select</option>
+        <option>Suddlendly</option>
+        <option>Slowly</option>
+      </CustomInput>
+    </FormGroup>
+    <FormGroup>
+      <Label for="eatingPainSwitch">Where is your abdominal pain located?</Label>
+      <CustomInput type="select" id="eatingPainSwitch" name="DoesYourAbdominalPainOccurAfterEating" value={eatingPain} onChange={(e) => setEatingPain(e.target.value)}>
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+      </CustomInput>
+    </FormGroup>
+    {/* <FormGroup>
+      <Label for="locationSwitch">Does the pain radiate of move to another location?</Label>
+      <div className='d-flex flex-row'>
+        <p>No </p>
+        <CustomInput type="switch" id="locationSwitch" name="doesThePainRadiateOfMoveToAnotherLocation" value={painLocation} onChange={(e) => setPainLocation(e.target.value)} label="Yes" />
+      </div>
+    </FormGroup>
+    <FormGroup>
+      <Label for="painSpeedSwitch">Did your abdominal pain start all of a sudden or did it come on slowly?</Label>
+      <div className='d-flex flex-row'>
+        <p>Suddlendly </p>
+        <CustomInput type="switch" id="painSpeedSwitch" name="DidYourAbdominalPainStartAllOfASuddenOrDidItComeOnSlowly" value={painAppear} onChange={(e) => setPainAppear(e.target.value)} label="Slowly" />
+      </div>
+    </FormGroup>
+    <FormGroup>
+      <Label for="eatingPainSwitch">Does your abdominal pain occur after eating?</Label>
+      <div className='d-flex flex-row'>
+        <p>No </p>
+        <CustomInput type="switch" id="eatingPainSwitch" name="DoesYourAbdominalPainOccurAfterEating" value={eatingPain} onChange={(e) => setEatingPain(e.target.value)} label="Yes" />
+      </div>
+    </FormGroup> */}
+    <Button>Submit</Button>
+  </Form>
+);
 }
 
 export default AbForm;
