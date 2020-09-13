@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 import axios from 'axios';
 
@@ -11,10 +11,8 @@ import '../Assets/CSS/main-content.css';
 
 import {
     Button,
-    NavLink,
     Form,
     FormGroup,
-    Label,
     Input,
     Card,
     CardBody,
