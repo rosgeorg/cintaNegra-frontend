@@ -24,7 +24,7 @@ const Footersito = () => {
               <Col md="6">
                 <div className=" copyright">
                   © {new Date().getFullYear()}{" "}
-                  <a className='text-color'>
+                  <a className='text-color' href='http://www.devf.la'>
                     Dev.F-EMR
                   </a>
                 </div>
