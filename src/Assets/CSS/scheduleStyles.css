@@ -4,13 +4,8 @@ table {
 
 .container-size{
     height: 100vh;
-    margin-top: 7rem !important;
+    width: 100%;
 }
-
-.containerr-size{
-    height: 100vh;
-}
-
 
 .schedule-text{
     text-align: center;
@@ -49,4 +44,12 @@ table {
     height: 28.5px;
     font-size: 0.7rem;
     padding: 0rem;
+}
+
+@media (max-width: 768px) and (max-height:1024px){
+
+    .schedule-text{
+        font-size: 10px;
+    }
+
 }

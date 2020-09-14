@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import BreakpointProvider from 'react-socks';
 
 // Components
 import Navigation from './Components/Navbars/Navbar';
@@ -15,7 +16,8 @@ import Routes from './Routes';
 
 function App() {
   return (
-    <Fragment>
+    //<BreakpointProvider>
+      <Fragment>
       <Router>
         <AuthContextProvider>
           <Navigation />
@@ -28,6 +30,7 @@ function App() {
         </AuthContextProvider>
       </Router>
     </Fragment>
+    //</BreakpointProvider>
   );
 }
 

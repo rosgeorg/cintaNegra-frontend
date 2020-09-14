@@ -43,9 +43,9 @@ const Subjective = (props) => {
     return (
         <div>
             <Container>
-                <Row className='roww-size'>
-                    <Col className='container containerr-size d-flex flex-column justify-content-center  pr-0 pl-0' md={4} lg={4} xl={4}>
-                        <div className='container container-card-size info-bg d-flex flex-column justify-content-between pt-4 pb-4'>
+                <Row className='row-container'>
+                    <Col className='container col-height d-flex flex-column justify-content-center  pr-0 pl-0' md={4} lg={4} xl={4}>
+                        <div className='container col-height info-bg d-flex flex-column justify-content-between pt-4 pb-4'>
                             <Cards 
                             rendering={encounter.subjetive ? encounter.subjetive.rendering : 'No Name'}
                             chiefComplaint={encounter.subjetive ? encounter.subjetive.chiefComplaint : 'No Name'}
@@ -57,13 +57,13 @@ const Subjective = (props) => {
                             sex={encounter.pt ? encounter.pt.sex : 'No Sex specified'}
                             />
                             <Buttons />
-                            <img className="logo_navbar" src="./LogoEMRHColor(copia2).png" alt="La imagen no existe o cambió su ubicación"></img>
+                            <img className="logo_navbar" src="./LogoEMRHColor.png" alt="La imagen no existe o cambió su ubicación"></img>
                         </div>
                     </Col>
-                    <Col className='container containerr-size d-flex flex-column justify-content-center  pr-0 pl-0' md={8} lg={8} xl={8}>
-                        <div className='container container-card-size info-bg pt-4 pb-4'>
+                    <Col className='container col-height containerr-size d-flex flex-column justify-content-center  pr-0 pl-0' md={8} lg={8} xl={8}>
+                        <div className='container col-height info-bg pt-4 pb-4'>
                             <div className='container d-flex flex-row justify-content-between'>
-                                <h6 style={{ fontSize: '30px' }}>(S) SUBJECTIVE</h6>
+                                <h6 className='title-size'>(S) SUBJECTIVE</h6>
                                 <NewForm />
                                 {/* <Button style={{ height: '70%', fontSize: '70%', fontWeight: 'bold' }}>FILL NEW FORM</Button> */}
                             </div>

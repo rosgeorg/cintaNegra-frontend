@@ -9,7 +9,7 @@ import {
 
 } from 'reactstrap';
 
-import '../../Assets/CSS/schedule.css'
+import '../../Assets/CSS/scheduleStyles.css'
 
 const Encounters = (props) => {
 
@@ -45,7 +45,6 @@ const Encounters = (props) => {
 
     }
 
-    
 
     return (
         

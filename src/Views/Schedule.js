@@ -38,14 +38,14 @@ const Schedule = (props) => {
                 setText(`There is ${encounters.length} encounters available`);
             })
             .catch(() => setText(`There are no encounters available`));
-    })
+    });
 
     if (!isAuth) return ( <Redirect to="/login" /> )
 
 
     return (
 
-        <div className='container d-flex align-items-center container-size'>
+        <div className='container d-flex flex-column justify-content-center container-size'>
             <Table striped className='schedule-text' style={{ borderRadius: '15px', position:'relative' }} >
                 <thead>
                     <tr>
