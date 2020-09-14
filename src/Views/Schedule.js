@@ -13,7 +13,7 @@ import {
 
 } from 'reactstrap';
 
-import '../Assets/CSS/schedule.css'
+import '../Assets/CSS/scheduleStyles.css'
 import ModalAdd from '../Components/Modal'
 
 
@@ -24,7 +24,7 @@ const Schedule = (props) => {
       // Contexto
     const { isAuth, axiosInstance } = useContext(AuthContext);
     const [encounters, setEncounters] = useState([]);
-    const [text, setText] = useState('Loading books...');
+    const [text, setText] = useState('Loading encounters...');
 
 
     const getEncounters = () => axiosInstance.get('/api/v1/encounters/');
@@ -35,10 +35,10 @@ const Schedule = (props) => {
                 console.log(response.data);
                 const encounters = response.data;
                 setEncounters(encounters);
-                setText(`There is ${encounters.length} books available`);
+                setText(`There is ${encounters.length} encounters available`);
             })
-            .catch(() => setText(`There are no books available`));
-    }, [])
+            .catch(() => setText(`There are no encounters available`));
+    })
 
     if (!isAuth) return ( <Redirect to="/login" /> )
 
@@ -74,6 +74,7 @@ const Schedule = (props) => {
                 </tbody>
             </Table>
         </div>
+
         // <React.Fragment>
         //   <h1>Available books</h1>
         //   <h2 className="mb-4"> { text } </h2>

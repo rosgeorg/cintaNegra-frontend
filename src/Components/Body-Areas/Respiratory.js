@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
-import AbPain from '../Diseases/AbPain'
-import Diarrhea from '../Diseases/Diarrhea'
-import Vomiting from '../Diseases/Vomiting'
 
 const Respiratory = (props) => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 import Gastro from '../../Components/Body-Areas/Gastrointestinal'
 import Respiratory from '../../Components/Body-Areas/Respiratory'
 
 const NewForm = (props) => {
-  const {
-    buttonLabel,
-    className
-  } = props;
+  const {className} = props;
 
   const [modal, setModal] = useState(false);
 
@@ -16,7 +13,7 @@ const NewForm = (props) => {
 
   return (
     <div>
-      <Button style={{ hheight: '70%', fontSize: '70%', fontWeight: 'bold', color: 'white', backgroundColor: '#089fc6' }} onClick={toggle}>UPDATE FORM</Button>
+      <Button style={{ height: '70%', fontSize: '70%', fontWeight: 'bold', color: 'white', backgroundColor: '#089fc6' }} onClick={toggle}>UPDATE FORM</Button>
       <Modal size='xl' isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>New Form</ModalHeader>
         <ModalBody>
