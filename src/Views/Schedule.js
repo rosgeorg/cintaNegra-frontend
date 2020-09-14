@@ -13,7 +13,7 @@ import {
 
 } from 'reactstrap';
 
-import '../Assets/CSS/schedule.css'
+import '../Assets/CSS/scheduleStyles.css'
 import ModalAdd from '../Components/Modal'
 
 
