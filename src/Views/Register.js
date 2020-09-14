@@ -72,7 +72,7 @@ const Register = () => {
       password,
     }
     try {
-      const res = await axios.post('https://erm-devf-backend.herokuapp.com/api/v1/users/signup', jsonSend);
+      await axios.post('https://erm-devf-backend.herokuapp.com/api/v1/users/signup', jsonSend);
       alert('Successful signup')
     } catch (error) {
       alert('Error on signup')

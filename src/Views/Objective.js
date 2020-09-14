@@ -1,9 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
-import axios from 'axios';
 import { AuthContext } from '../contexts/AuthContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { Link } from 'react-router-dom';
 
 import '../Assets/CSS/subjective.css'
 import ObjForm from '../Components/Forms/ObjForm'
@@ -16,9 +14,7 @@ import CardsTest from '../Components/objCard'
 import {
     Container,
     Col,
-    Row,
-    Button,
-    Input,
+    Row
 } from "reactstrap";
 
 
@@ -39,7 +35,7 @@ const Objective = () => {
                 setEncounter(encounter);
             })
             .catch((err) => console.log(err));
-    }, [])
+    })
 
     return (
         <div>

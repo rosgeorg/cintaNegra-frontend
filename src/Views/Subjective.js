@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import axios from 'axios';
+
 import { AuthContext } from '../contexts/AuthContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -10,17 +10,13 @@ import CardsTest from '../Components/cardPrueba'
 import {
     Container,
     Col,
-    Row,
-    Button,
-    Input,
+    Row
 } from "reactstrap";
 
 import '../Assets/CSS/subjective.css'
 
 import Cards from '../Components/Card'
 import Buttons from '../Components/Buttons'
-import Gastro from '../Components/Body-Areas/Gastrointestinal'
-import Respiratory from '../Components/Body-Areas/Respiratory'
 import NewForm from '../Components/Forms/NewForm'
 
 
@@ -41,7 +37,7 @@ const Subjective = (props) => {
             setEncounter(encounter);
           })
           .catch((err) => console.log(err));
-      }, [])
+      })
 
 
     return (

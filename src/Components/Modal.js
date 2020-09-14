@@ -15,7 +15,6 @@ import {
 
 const ModalAdd = (props) => {
   const {
-    buttonLabel,
     className
   } = props;
 
