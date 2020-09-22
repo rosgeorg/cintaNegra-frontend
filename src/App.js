@@ -1,30 +1,26 @@
-import React, { Fragment } from 'react';
-import BreakpointProvider from 'react-socks';
+import React, { Fragment } from "react";
 
 // Components
-import Navigation from './Components/Navbars/Navbar';
-import Footersito from './Components/Footers/Footer';
+import Navigation from "./Components/Navbars/Navbar";
+import Footersito from "./Components/Footers/Footer";
 
 // Contexts
-import AuthContextProvider from './contexts/AuthContext';
+import AuthContextProvider from "./contexts/AuthContext";
 
 // Misc
-import { Container } from 'reactstrap';
+import { Container } from "reactstrap";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-import Routes from './Routes';
-
+import Routes from "./Routes";
 
 function App() {
   return (
     //<BreakpointProvider>
-      <Fragment>
+    <Fragment>
       <Router>
         <AuthContextProvider>
           <Navigation />
           <Container>
-            <Switch>
-              { Routes }
-            </Switch>
+            <Switch>{Routes}</Switch>
           </Container>
           <Footersito />
         </AuthContextProvider>
@@ -35,6 +31,3 @@ function App() {
 }
 
 export default App;
-
-
-
