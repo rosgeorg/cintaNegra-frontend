@@ -1,21 +1,45 @@
-.subtitle-size{
-    font-size: 17px;
+.subtitle-size {
+  font-size: 17px;
 }
 
-.text-size{
-    font-size: 14px;
+.text-size {
+  font-size: 14px;
 }
 
-@media (max-width: 768px) and (max-height:1024px){
-
-    .image-size{
-        height:50%;
-        width:50%; 
-    }
-
-    .text-size{
-        font-size: 12px;
-    }
-
+.card-text {
+  font-size: 12px;
 }
 
+.card-line-height {
+  line-height: 3px;
+}
+
+/* iPad */
+@media (max-width: 768px) and (max-height: 1024px) {
+  .image-size {
+    height: 50%;
+    width: 50%;
+  }
+
+  .text-size {
+    font-size: 12px;
+  }
+}
+
+/* iPad Pro */
+@media (min-width: 769px) and (max-width: 1024px) and (max-height: 1366px) and (min-height: 1025px) {
+  .text-size {
+    font-size: 22px;
+  }
+
+  .card-text {
+    font-size: 22px;
+  }
+
+  .card-height {
+    height: 27rem;
+  }
+  .card-line-height {
+    line-height: 20px;
+  }
+}

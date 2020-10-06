@@ -1,23 +1,37 @@
-import React from 'react';
-import { Card, CardBody, CardTitle, CardText} from 'reactstrap';
+import React from "react";
+import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 
-import '../Assets/CSS/cardStyle.css'
+import "../Assets/CSS/cardStyle.css";
 
 const Cards = (props) => {
   return (
     <div>
       <Card>
-        <CardBody style={{fontSize:'12px'}}>
+        <CardBody className="card-text card-height">
           <CardTitle>PATIENT:</CardTitle>
-          <CardText style={{lineHeight:'3px'}}>Name: <span style={{fontWeight:'bold'}}>{props.name} {props.lastName}</span> </CardText>
-          <CardText style={{lineHeight:'3px'}}>Date of Birthday:</CardText> 
-          <CardText style={{lineHeight:'3px', fontWeight:'bold'}}>{props.dob}</CardText> 
-          <CardText style={{lineHeight:'3px'}}>Gender: <span style={{fontWeight:'bold'}}>{props.sex}</span></CardText> 
+          <CardText className="card-line-height">
+            Name:{" "}
+            <span style={{ fontWeight: "bold" }}>
+              {props.name} {props.lastName}
+            </span>{" "}
+          </CardText>
+          <CardText className="card-line-height">Date of Birthday:</CardText>
+          <CardText style={{ fontWeight: "bold" }} className="card-line-height">
+            {props.dob}
+          </CardText>
+          <CardText className="card-line-height">
+            Gender: <span style={{ fontWeight: "bold" }}>{props.sex}</span>
+          </CardText>
           <hr></hr>
           <CardTitle>APPOINTMENT:</CardTitle>
-          <CardText style={{lineHeight:'3px'}}>Rendering: <span style={{fontWeight:'bold'}}>{props.rendering}</span></CardText>
-          <CardText style={{lineHeight:'3px'}}>Date:</CardText>
-          <CardText style={{lineHeight:'3px', fontWeight:'bold'}}>{props.schedule}</CardText> 
+          <CardText className="card-line-height">
+            Rendering:{" "}
+            <span style={{ fontWeight: "bold" }}>{props.rendering}</span>
+          </CardText>
+          <CardText className="card-line-height">Date:</CardText>
+          <CardText style={{ fontWeight: "bold" }} className="card-line-height">
+            {props.schedule}
+          </CardText>
         </CardBody>
       </Card>
     </div>
